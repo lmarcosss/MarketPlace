@@ -13,13 +13,10 @@ class App {
 
   database() {
     //mongodb://usuario:senha@localhost:27017/nomedatabase
-    mongoose.connect(
-      databaseConfig.uri,
-      {
-        useCreateIndex: true,
-        useNewUrlParser: true
-      }
-    );
+    mongoose.connect(databaseConfig.uri, {
+      useCreateIndex: true,
+      useNewUrlParser: true
+    });
   }
 
   middlewares() {

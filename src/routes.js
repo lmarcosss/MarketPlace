@@ -1,9 +1,10 @@
-const express = require("express");
+const express = require('express')
 
-const routes = express.Router();
+const routes = express.Router()
 
-const UserController = require("./app/controllers/UserController");
+const UserController = require('./app/controllers/UserController')
+const SessionController = require('./app/controllers/SessionController')
+routes.post('/users', UserController.store)
+routes.post('/session', SessionController.store)
 
-routes.post("./users", UserController.store);
-
-module.exports = routes;
+module.exports = routes
